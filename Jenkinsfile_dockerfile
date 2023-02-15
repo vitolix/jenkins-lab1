@@ -1,12 +1,14 @@
 pipeline {
   agent { dockerfile true }
-  stages('Test') {
-    steps {
-      sh '''
-        pwd 
-        hostname
-        ls /
-        '''
+  stages {
+    stage('Test') {
+      steps {
+        sh '''
+          pwd 
+          hostname
+          ls /
+          '''
+      }
     }
   }
 }
